@@ -1,3 +1,8 @@
+:root {
+  --main-color: rgb(16 152 173);
+  --white: #fff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +11,8 @@
 body {
   font-family: sans-serif;
   color: #444;
-  border-top: 10px solid #1098ad;
+  border-top: 10px solid var(--main-color);
+  position: relative;
 }
 
 .container {
@@ -21,14 +27,14 @@ article {
 h1,
 h2,
 h3 {
-  color: #1098ad;
+  color: var(--main-color);
 }
 
 h1 {
   font-size: 26px;
   text-transform: uppercase;
   font-style: italic;
-  color: #1098ad;
+  color: var(--main-color);
 }
 
 h2 {
@@ -99,7 +105,7 @@ aside {
   background-color: #f7f7f7;
   border-width: 5px 0;
   border-style: solid;
-  border-color: #1098ad;
+  border-color: var(--main-color);
   padding: 50px 0;
 }
 
@@ -126,12 +132,12 @@ li:first-child {
 }
 
 a:link {
-  color: #1098ad;
+  color: var(--main-color);
   text-decoration: none;
 }
 
 a:visited {
-  color: #1098ad;
+  color: var(--main-color);
 }
 
 a:hover {
@@ -147,4 +153,30 @@ a:active {
 
 nav {
   font-size: 18px;
+}
+
+.like-button {
+  font-size: 22px;
+  padding: 2px 17px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  border: 3px solid var(--main-color);
+  border-radius: 7px;
+  background-color: var(--main-color);
+  color: var(--white);
+}
+
+.like-button__icon {
+  color: var(--white);
+}
+
+.like-button:hover {
+  background-color: var(--white);
+  color: var(--main-color);
+}
+
+.like-button:hover .like-button__icon {
+  color: rgb(255, 0, 0);
 }
