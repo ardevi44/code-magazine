@@ -37,9 +37,28 @@ h1 {
   color: var(--main-color);
 }
 
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
 h2 {
   font-size: 40px;
   margin-bottom: 30px;
+  position: relative;
+}
+
+h2::after {
+  content: "TOP";
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #444;
+  background-color: #ffe70e;
+  padding: 5px 10px;
+  position: absolute;
+  top: -15px;
+  right: -25px;
 }
 
 h3 {
@@ -153,6 +172,7 @@ a:active {
 
 nav {
   font-size: 18px;
+  text-align: center;
 }
 
 .like-button {
