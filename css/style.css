@@ -27,21 +27,25 @@ body {
   margin: 0 auto;
 }
 
+.main-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 75px;
+}
+
 article {
-  width: 825px;
-  float: left;
+  flex-basis: 825px;
   margin-bottom: 60px;
   position: relative;
 }
 
 aside {
-  width: 300px;
+  flex-basis: 300px;
   background-color: #f7f7f7;
   border-width: 5px 0;
   border-style: solid;
   border-color: var(--main-color);
   padding: 50px 0;
-  float: right;
 }
 
 h1,
@@ -51,7 +55,6 @@ h3 {
 }
 
 h1 {
-  float: left;
   font-size: 26px;
   text-transform: uppercase;
   font-style: italic;
@@ -109,11 +112,11 @@ li {
   margin-bottom: 10px;
 }
 
-li:first-child {
+.blog__list li:first-child {
   font-weight: bold;
 }
 
-li:last-child {
+.blog__list li:last-child {
   font-style: italic;
   margin-bottom: 0;
 }
@@ -138,27 +141,20 @@ a:active {
   font-style: italic;
 }
 
-footer {
-  clear: both;
-}
-
 /* classes */
 
 .main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: #f7f7f7;
   padding: 20px 40px;
   margin-bottom: 60px;
 }
 
 .main-nav {
-  float: right;
-  margin-left: 20px;
-}
-
-.main-nav a:link {
-  display: inline-block;
-  margin-right: 30px;
-  margin-top: 9px;
+  display: flex;
+  gap: 20px;
 }
 
 .main-nav a:link:last-child {
@@ -169,20 +165,23 @@ footer {
   margin-bottom: 40px;
 }
 
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
 .author-img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  margin-bottom: 20px;
-  float: left;
 }
 
 .author {
-  float: left;
-  margin-left: 20px;
-  margin-top: 15px;
   font-style: italic;
   font-size: 18px;
+  margin-bottom: 0;
 }
 
 .post-img {
@@ -203,17 +202,18 @@ footer {
 
 .related-post {
   margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .related-post__img {
   width: 70px;
   height: 70px;
   border-radius: 10px;
-  float: left;
 }
 
 .related-post__description {
-  float: right;
   max-width: 195px;
 }
 
@@ -223,8 +223,8 @@ footer {
 
 .related-author {
   font-size: 14px;
-  font-weight: bold;
   margin-bottom: 0;
+  font-style: italic;
 }
 
 .like-button {
@@ -255,10 +255,4 @@ footer {
 
 .copyright {
   font-size: 16px;
-}
-
-.clearfix::after {
-  content: "";
-  display: block;
-  clear: both;
 }
